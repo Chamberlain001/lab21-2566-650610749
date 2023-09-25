@@ -12,11 +12,10 @@ datasource db {
 
 model Course {
   id String @id @default(auto()) @map("_id") @db.ObjectId
-
+ 
   courseNo    String       @unique
   title       String       @unique
-  enrollments Enrollment[]
-
+ Enrollment Enrollment[]
   @@map("courses")
 }
 
